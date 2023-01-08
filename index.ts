@@ -19,3 +19,10 @@ if (!res.data?.public_metrics) throw new Error("No data found");
 
 console.log(res.data.public_metrics); // get 5 properties, including impression_count
 // console.log(res.data.public_metrics.impression_count); compile error for missing property, but it's there
+
+const res2 = await client.tweets.findTweetById(process.env.TWEET_ID, {
+  "tweet.fields": ["non_public_metrics"],
+});
+
+// console.log(res2.data.non_public_metrics); // get undefined, I think it's because "impression_count" moved to "public_metrics"
+// console.log(res2.data.non_public_metrics.impression_count); able to compile, but cant get the value
