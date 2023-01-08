@@ -2,6 +2,7 @@
 
 1. `git clone https://sor4chi/repro-twitter-sdk-missing-params`
 2. `cd repro-twitter-sdk-missing-params`
-3. `pnpm install / yarn install / npm install`
-4. `pnpm build / yarn build / npm run build`
-5. `pnpm start / yarn start / npm run start`
+3. SET `BEARER_TOKEN` and `TWEET_ID` in `.env`
+4. `pnpm install / yarn install / npm install`
+5. `pnpm build / yarn build / npm run build`
+6. `pnpm start / yarn start / npm run start`
